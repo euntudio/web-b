@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동네서점</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .wrap{
+            width: 426px;
+        }
+        .wrap .contents {
+            width: 426px;
+            padding: 50px 20px;
+        }
+        .wrap .contents h1{
+            margin-bottom: 20px;
+        }
+        .wrap .contents ul {
+            display: flex;
+        }
+        .wrap .contents ul li {
+            margin: 5px;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .wrap h2 {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        .wrap .list .best {
+            width: 390px;
+            margin: 16px 20px;
+            border: 1px solid #555;
+            border-radius: 10px;
+            display: flex;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+
+        .wrap .list .best img {
+            width: 102px;
+            height: 124px;
+            margin: 18px 0;
+            margin-left: 20px;
+            border-radius: 10px;
+        }
+
+        .wrap .list .best .text {
+            margin: 34px 11px;
+        }
+
+        .wrap .list .best .text p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .wrap .list .best .text span {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .wrap .list .text .sctext {
+            width: 100px;
+            height: 35px;
+            background-color: #2C0089;
+            text-align: center;
+            line-height: 35px;
+            color: #fff;
+            border-radius: 30px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .wrap .select {
+            width: 426px;
+        }
+
+        .wrap .select ul {
+            margin: 16px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .wrap .select ul li {
+            margin-bottom: 26px;
+        }
+
+        .wrap .select ul li img {
+            width: 123px;
+            height: 160px;
+            border-radius: 10px;
+        }
+
+        .wrap .select ul li p {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="contents">
+            <h1>동네서점</h1>
+            <ul>
+                <li>베스트</li>
+                <li>신상품</li>
+                <li>이벤트</li>
+                <li>사은품</li>
+            </ul>
+        </div><!-- .contents end -->
+
+        <div class="list">
+            <h2>베스트</h2>
+            <div class="best">
+                <img src="img/베스트-1.png" alt="" />
+                <div class="text">
+                    <p>미스터 프레지던트</p>
+                    <span>탁현민</span>
+                    <div class="sctext">바로가기</div>
+                </div><!-- .text end -->
+            </div><!-- .best end -->
+
+            <h2>오늘의 선택</h2>
+            <div class="select">
+                <ul>
+                    <li>
+                        <img src="img/선택-1.png" alt="" />
+                        <p>세이노의 가르침</p>
+                    </li>
+                    <li>
+                        <img src="img/선택-2.png" alt="" />
+                        <p>행복을 담아줄께</p>
+                    </li>
+                    <li>
+                        <img src="img/선택-3.png" alt="" />
+                        <p>에이든 국내여행...</p>
+                    </li>
+                    <li>
+                        <img src="img/선택-4.jpg" alt="" />
+                        <p>원씽</p>
+                    </li>
+                    <li>
+                        <img src="img/선택-5.jpg" alt="" />
+                        <p>불편한 편의점</p>
+                    </li>
+                    <li>
+                        <img src="img/선택-6.jpg" alt="" />
+                        <p>역행자</p>
+                    </li>
+                    </ui>
+            </div><!-- .select end -->
+        </div><!-- .list end -->
+    </div><!-- .wrap end -->
+</body>
+
+</html>

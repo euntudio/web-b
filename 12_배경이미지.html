@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .bg-01{
+            background-color: hotpink;
+            margin: 50px;
+            background-image: url('img/이미지-1.jpg');
+            height: 300px;
+            background-size: cover; /* 안에 들어가는 배경 값, 가로 세로 또는 퍼센트로 작성 가능 */
+            background-repeat: no-repeat; /* repeat, repeat-x, repeat-y, no-repeat 값 적용 가능 */
+            background-position: 50%; /* 가로, 세로 방향으로 배경이미지 이동, 퍼센트로도 작성 가능 */
+            background-position: center top;
+            /* x축은 left, center, right */
+            /* y축은 top, center, bottom */
+        }
+        .bg-02{
+            margin: 50px;
+            height: 300px;
+            background-color: aqua;
+            background: url('img/이미지-1.jpg') center center / cover no-repeat;
+            /* url(이미지 경로) x축 위치, y축 위치 / 사이즈 이미지 반복; - 위치와 사이즈 순서가 바뀌면 안됨 */ 
+        }
+        .bg-03{
+            height: 500px;
+            margin: 50px;
+            background: url('img/이미지-3.jpg') center center / cover no-repeat fixed;
+            background-attachment: fixed; /* 스크롤 시에도 배경 고정 */
+        }
+        .bg-04{ /* 그라데이션 적용 */
+            height: 300px;
+            margin: 50px;
+            background: #4fe5ff; /* 그라데이션 적용이 안되는 사이트에서 적용할 색상 값 */
+            background: linear-gradient(90deg, rgba(79, 229, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 243, 138, 1) 100%);
+            display: flex; 
+            align-items: center; /* 문장 수직 정렬 */
+            text-align: center; /* 글자 가운데 정렬 */
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-01">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus exercitationem repudiandae doloribus quaerat culpa aperiam, impedit eos laboriosam nostrum architecto deserunt provident, saepe magni cum. Enim, dolore? Autem, qui laudantium.</p>
+    </div><!-- .bg-01 end -->
+    <div class="bg-02">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus exercitationem repudiandae doloribus quaerat culpa aperiam, impedit eos laboriosam nostrum architecto deserunt provident, saepe magni cum. Enim, dolore? Autem, qui laudantium.</p>
+    </div><!-- .bg-02 end -->
+    <div class="bg-03">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus exercitationem repudiandae doloribus quaerat culpa aperiam, impedit eos laboriosam nostrum architecto deserunt provident, saepe magni cum. Enim, dolore? Autem, qui laudantium.</p>
+    </div><!-- .bg-03 end -->
+    <div class="bg-04">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus exercitationem repudiandae doloribus quaerat culpa aperiam, impedit eos laboriosam nostrum architecto deserunt provident, saepe magni cum. Enim, dolore? Autem, qui laudantium.</p>
+    </div><!-- .bg-04 end -->
+</body>
+</html>
