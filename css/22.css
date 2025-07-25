@@ -57,7 +57,7 @@ body{
     position: absolute; /* 마진 0 오토가 먹히지 않아서 아래 top, left, transform 값으로 써준다. */
     top: 50%; 
     left: 50%;
-    /* transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     color: aliceblue;
     
 }
