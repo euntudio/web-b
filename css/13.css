@@ -1,0 +1,124 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.section-01{
+    width: 1280px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.section-01 .inner h2{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.section-01 .inner .list{
+    display: flex;
+    justify-content: space-between;
+}
+.section-01 .inner .list .item{
+    margin: 16px 8px;
+}
+.section-01 .inner .list .item img{
+    width: 352px;
+    height: 352px;
+    border-radius: 20px;
+}
+.section-01 .inner .list .item .text{
+    margin-top: 20px;
+}
+.section-01 .inner .list .item .text h3{
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+.section-01 .inner .list .item .text p{
+    font-size: 16px;
+}
+
+.section-02{
+    padding: 100px 0;
+    background-color: #efefef;
+}
+.section-02 .inner{
+    width: 1280px;
+    margin: 0 auto;
+}
+.section-02 h2{
+    font-size: 40px;
+    margin-bottom: 32px;
+}
+.section-02 .menu{
+    margin-bottom: 32px;
+    display: flex;
+}
+.section-02 .menu .submenu-1{
+    padding: 23px 28px;
+    margin-right: 12px;
+    background-color: #8833FF;
+    border: 1px solid #888;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+}
+.section-02 .menu .submenu-2{
+    padding: 23px 28px;
+    margin-right: 12px;
+    background-color: #fff;
+    border: 1px solid #888;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #888;
+    text-align: center;
+}
+.section-02 .menu .submenu-3{
+    padding: 23px 28px;
+    margin-right: 12px;
+    background-color: #fff;
+    border: 1px solid #888;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #888;
+    text-align: center;
+}
+.section-02 .menu .submenu-4{
+    padding: 23px 28px;
+    margin-right: 12px;
+    background-color: #fff;
+    border: 1px solid #888;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #888;
+    text-align: center;
+}
+.section-02 .list{
+    display: flex;
+    justify-content: space-between;
+}
+.section-02 .list .item{
+    margin-right: 24px;
+    background-color: #ffffff;
+}
+.section-02 .list .item img{
+    width: 340px;
+    height: 451px;
+    padding: 20px;
+}
+.section-02 .list .item .text{
+    margin-left: 20px;
+}
+.section-02 .list .item .text h3{
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.section-02 .list .item .text p{
+    font-size: 16px;
+}
