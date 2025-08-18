@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    text-align: center; /* text-03의 부모영역인 body에 가운데 배치 작성 */
+}
+.text-01{ /* 앞 뒤 텍스트 추가하기 */
+    font-size: 40px;
+    text-align: center;
+}
+.text-01::before{
+    content: '💖';
+}
+.text-01::after{
+    content: '🎀뒤에추가';
+}
+.text-02{ /* 라인선 넣기 */
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 0;
+    position: relative; /* 위치 잡아주기 1 : 기준잡기 */
+}
+.text-02::before{
+    content: ''; /* 문자를 작성하지 않으니 비워두기 */
+    width: 5px;
+    height: 50px;
+    background-color: blueviolet;
+    display: block;
+    position: absolute; /* 위치 잡아주기 2 */
+    left: 50%; /* 위치 잡아주기 3 */
+    bottom: -60px; /* 위치 잡아주기 4 */
+    transform: translatex(-50%); /* 위치 잡아주기 5 */
+}
+.text-03{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin: 100px 0;
+    position: relative;
+    display: inline-block; /* 본인의 넓이 값 만큼 잡히게 된다. */
+}
+.text-03:after{ /* before는 윗쪽, after는 아랫쪽에 배치됨 */
+    content: '';
+    width: 100%;
+    height: 20px;
+    background-color: aqua;
+    display: block;
+    position: absolute;
+    left: 50%; /* 1. 부모 포지션 기준으로 이동 */
+    bottom: 0;
+    transform: translateX(-50%); /* 2. 본인 넓이를 기준으로 이동 */
+    z-index: -1; /* 줄 텍스트 뒤로 보내주기 */
+    padding: 0 20px; /* 줄 길이 늘려주기 */
+}
+
+.item{
+    width: 400px;
+    margin: 0 auto; /* 가운데 배치 */
+    position: relative;
+    overflow: hidden; /* 가상요소선택자인 배경 가리기 */
+}
+.item::after{
+    content: ''; /* 내용 없으니 비워두기 */
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff70;
+    display: block;
+    position: absolute;
+    top: 100%; /* 가상요소선택자 영역 밖 아래로 배치 */
+    left: 0;
+    transition: all 1s; /* 영역 밖으로 마우스 벗어났을 때 가상요소선택자 아래로 */
+}
+.item .image_box{
+    height: 400px;
+}
+.item .image_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item a{
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #333;
+    background-color:rgb(255, 255, 255);
+    position: absolute;
+    display: block;
+    left: 50%; /* 0으로 작성한 후 위치를 보고 옮길 방향 정하기 */
+    top: 50%; /* 0으로 작성한 후 위치를 보고 옮길 방향 정하기 */
+    transform: translate(-50%, -50%);
+    z-index: 1; /* 가상요소선택자 배경보다 위로 배치 */
+    opacity: 0; /* 안보이게 가려주기 */
+}
+.item:hover::after{ /* 가상요소선택자를 아이템 영역에 마우스 올렸을 때 */
+    top: 0; /* 위로 올라오도록 */
+    transition: all 1s;
+}
+.item:hover a{
+    opacity: 1;
+}
+.button{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #333;
+    border-radius: 30px;
+    text-align: center;
+    display: block;
+    line-height: 50px;
+    margin: 50px auto; /* 버튼 가운데 정렬 */
+    position: relative; /* 가상요소선택자의 포지션 기준 */
+    overflow: hidden;
+}
+.button::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: rgb(74, 210, 252);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: -1;
+}
+.button:hover::after{
+    left: 0;
+    transition: all 1s;
+}
+
+.button-02{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #3ea8ff;
+    border-radius: 30px;
+    display: block;
+    line-height: 50px;
+    margin: 50px auto;
+    color: #3ea8ff;
+    position: relative;
+    overflow: hidden;
+}
+.button-02::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #3ea8ff54;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: -1;
+}
+.button-02:hover::after{
+    top: 0;
+    transition: all 0.7s;
+}

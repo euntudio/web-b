@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.box div{
+    width: 500px;
+    height: 50px;
+    border: 1px solid #333;
+    line-height: 50px;
+    text-align: center;
+    margin: 30px;
+}
+.box div:first-child:hover{
+    width: 700px;
+    background-color: aquamarine;
+    transition: all 0.7s; /* all은 변화시키고자 하는 속성 모두를 통틀어서 */
+}
+.box div:nth-child(2):hover{
+    height: 500px;
+    background-color: deeppink;
+    transition: background-color 2s; /* 백그라운드에게만 적용 */
+}
+.box div:nth-child(3):hover{
+    height: 500px;
+    background-color: deepskyblue;
+    transition: all 1s 2s; /* 1초동안 실행되고 2초뒤에 적용 (지연시간) */
+}
+.box div:nth-child(4):hover{
+    height: 200px;
+    background-color: gold;
+    transition: height 1s linear;
+}
+.box div:last-child:hover{
+    width: 700px;
+    height: 300px;
+    background-color: lightpink;
+    transition: width 1s,
+                height 1s 1s;
+}

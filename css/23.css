@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    background-color: rgb(180, 255, 255);
+    margin: 50px 0;
+    padding: 50px;
+}
+
+section h2 {
+    margin-bottom: 40px;
+}
+
+section .list {
+    background-color: #9efadb;
+}
+
+section .list .item {
+    background-color: #d6ffae;
+    border: 1px solid #ac9efa;
+}
+
+.flex-01 .list {
+    display: flex;
+    justify-content: space-around;
+    /* center
+    flex-end
+    flex-start(기본값)
+    space-between
+    space-around
+    space-evenly */
+}
+
+.flex-02 .list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* center
+    flex-start
+    flex-end */
+}
+
+.flex-02 .list .item:first-child {
+    height: 300px;
+}
+
+.flex-02 .list .item:nth-child(2) {
+    height: 200px;
+}
+
+.flex-02 .list .item:nth-child(3) {
+    height: 100px;
+}
+
+.flex-03 .list{
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.flex-03 .list .item{
+    width: 100%;
+}
+
+.flex-04 .list{
+    display: flex;
+}
+.flex-04 .list .item:first-child{
+    order: 1;
+}
+.flex-04 .list .item:last-child{
+    order: -1
+}
+
+.flex-05 .list{
+    height: 300px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+
+.cj{
+    width: 350px;
+    height: 450px;
+    padding: 30px;
+    background-color: #9efadb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cj strong{
+    width: 80px;
+    height: 80px;
+    background-color: #f4fa9e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
