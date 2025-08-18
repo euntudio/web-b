@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body.active{ /* 메뉴서랍 실행했을 때 전체 화면 스크롤바 없애기 */
+    overflow: hidden;
+}
+.header{
+    height: 100px;
+}
+.header .inner{
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .inner .logo{
+    height: 70px;
+}
+.header .inner .logo a{
+    display: block;
+    height: 100%;
+}
+.header .inner .logo a img{
+    height: 100%;
+}
+.header .inner .menu_btn{
+    height: 40px;
+    border: 0; /* 테두리 없애기 */
+    background-color: transparent; /* 투명하게 */
+}
+.header .inner .menu_btn img{
+    height: 100%;
+}
+
+.header .inner .nav{
+    width: 50%;
+    height: 100%;
+    background-color: deepskyblue;
+    position: fixed;
+    /* right: 0; */
+    right: -100%; /* 1. 영역 밖으로 빼주기 */
+    top: 100px;
+    padding: 70px;
+    /* display: none; */
+    transition: right 0.7s linear; /* 3. 움직임 효과 주기 */
+    overflow-y: auto;
+}
+.header .inner .nav::-webkit-scrollbar{ /* 스크롤바 모양 없애기 (기능은 적용되어있는 상태) */
+    display: none;
+}
+.header .inner .nav.active{
+    /* display: block; */
+    right: 0; /* 2. 영역 안으로 이동 */
+}
+.header .inner .nav .gnb{}
+.header .inner .nav .gnb > li{
+    margin-bottom: 32px;
+}
+.header .inner .nav .gnb > li .depth-01{
+    font-size: 20px;
+    font-weight: bold;
+}
+.header .inner .nav .gnb > li .depth-02{}
+.header .inner .nav .gnb > li .depth-02 li{
+    color: rgba(33, 33, 33, 0.643);
+    padding: 10px 0;
+}
+.header .inner .nav .gnb > li .depth-02 li a{}
+
+.main_visual{ /* 메뉴서랍 실행했을 때 스크롤이 되는 경우 작성 */
+    height: 150vh;
+}

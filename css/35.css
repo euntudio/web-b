@@ -35,8 +35,6 @@ a{
 .header .inner .logo a img{
     height: 100%;
 }
-
-.header .inner .nav{}
 .header .inner .nav .gnb{
     display: flex;
 }
@@ -61,9 +59,6 @@ a{
 }
 .header .inner .nav .gnb > li:hover .depth-02{
     display: block; /* 마우스 호버 효과 */
-}
-.header .inner .nav .gnb > li .depth-02 li{
-
 }
 .header .inner .nav .gnb > li .depth-02 li:hover{
     background-color: rgb(64, 188, 255); /* 전체 영역에 색이 안채워질 때는 .depth-02 영역 말고 .depth-02 li a 영역에 padding 값을 준다. */
