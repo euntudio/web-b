@@ -47,13 +47,13 @@ body{
 }
 .header .inner .nav .gnb > li{
     padding: 0 40px;
-    color: #fff;
     font-size: 18px;
 }
 .header .inner .nav .gnb > li .depth-01{
     display: block;
     line-height: 100px;
     font-size: 18px;
+
 }
 .header .inner .nav .gnb > li .depth-02{}
 .header .inner .nav .gnb > li .depth-02 li{}

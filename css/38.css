@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-01{
+    background-color: rgb(192, 239, 255);
+    padding: 160px 0;
+}
+
+.section-01 .inner{
+    max-width: 1440px; /* 미디어 쿼리 대신 본래 코드 안에서 작성 */
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+.section-01 .inner h2{
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+.section-01 .inner .list{
+    display: flex;
+    justify-content: space-between;
+}
+.section-01 .inner .list .item{
+    /* width: 333px; */
+    width: 24%; /* 반응형이기 때문에 퍼센트로 변환 */
+}
+.section-01 .inner .list .item a .image{
+    width:  100%;
+    height: 400px;
+}
+.section-01 .inner .list .item a .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.section-02{
+    background-color: rgb(160, 255, 164);
+    padding: 160px 0;
+}
+.section-02 .inner{
+    max-width: 1440px;
+    width: calc(100% - 30px); 
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; /* item에 넓이 값을 지정하지 않아도 정렬 가능 */
+    row-gap: 100px;
+}
+.section-02 .inner .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.section-02 .inner .item:nth-child(1) .image{
+    order: 1;
+}
+.section-02 .inner .item .image{
+    width: 626px;
+    height: 500px;
+}
+.section-02 .inner .item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-02 .inner .item .text{
+    flex-shrink: 0; /* 글자 줄바꿈 방지 */
+}
+.section-02 .inner .item .text strong{
+    font-size: 40px;
+}
+.section-02 .inner .item .text p{
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.section-03{
+    background-color: plum;
+    padding: 160px 0;
+}
+.section-03 .inner{
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+.section-03 .inner h2{
+    font-size: 48px;
+    margin-bottom: 40px ;
+}
+
+.section-03 .inner .list{
+    display: flex;
+    justify-content: space-between;
+}
+.section-03 .inner .list .item{
+    width: 24%; /* 100% / 4 = 25%, 여백 고려해서 -1% */
+    position: relative;
+}
+.section-03 .inner .list .item:hover a .text{
+    display: flex;  /* display: block; 사용하지 않고, .text에 사용했던 flex 쓰기 */
+}
+.section-03 .inner .list .item a{}
+.section-03 .inner .list .item a .image{
+    width: 100%;
+    height: 400px;
+}
+.section-03 .inner .list .item a .image img{
+    width:  100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section-03 .inner .list .item a .text{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.452);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+}
+.section-03 .inner .list .item a .text h3{}
+.section-03 .inner .list .item a .text p{}
+
+@media screen and (max-width: 1024px) { /* 태블릿 크기 */
+    .section-01{
+        padding:  80px 0;
+    }
+    .section-01 .inner .list{
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+    .section-01 .inner .list .item{
+        width: 49%;
+    }
+    .section-02 .inner .item{
+        flex-wrap: wrap;
+    }
+    .section-02 .inner .item .image{
+        width: 100%;
+    }
+    .section-02 .inner .item:nth-child(1) .image{
+        order: 0;
+    }
+
+    .section-03 .inner .list .item a .text{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .section-03 .inner .list{
+        flex-wrap: wrap;
+        row-gap: 24px;
+    }
+    .section-03 .inner .list .item{
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-01 .inner h2{
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .section-01 .inner .list .item a .image{
+        height: 240px;
+    }
+    .section-02 .inner .item .text strong{
+        font-size: 24px;
+    }
+    .section-02 .inner .item .text p{
+        font-size: 18px;
+    }
+
+    .section-03 .inner .list .item{
+        width: 100%;
+    }
+    .section-03 .inner .list .item a .image{
+        height: 200px;
+    }
+    .section-03 .inner .list .item a .text{
+        height: auto;  /* 값 리셋 */
+        position: static; /* 초기값 */
+        background-color: transparent; /* 배경 없애기 */
+        color: #333;
+        margin-top: 12px;
+    }
+}
