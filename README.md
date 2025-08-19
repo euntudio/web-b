@@ -141,8 +141,14 @@ https://jinjin1122.github.io/web-b/35_헤더내비게이션-로고포함.html
 
 https://jinjin1122.github.io/web-b/36_헤더내비게이션-메뉴.html
 
+
 https://jinjin1122.github.io/web-b/36_쏘카.html
+
 
 https://jinjin1122.github.io/web-b/36_대성그룹.html
 
-https://jinjin1122.github.io/web-b/37_ 반응형-미디어쿼리.html
+
+https://jinjin1122.github.io/web-b/37_반응형-미디어쿼리.html
+
+
+https://jinjin1122.github.io/web-b/38_반응형-레이아웃변화.html
