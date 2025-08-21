@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.section{
+    margin: 100px 0;
+    position: relative; /* 슬라이드 아래 버튼 포지션 기준 잡아주기 */
+}
+.section h2{
+    width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.section .swiper-wrapper{ /* 영역 가운데로 옮기기 */
+    width: 1280px;
+    margin: 0 auto;
+}
+.section .swiper.sectionSwiper{ /* position: relative; 초기화 */
+    position: static;
+}
+.section .swiper.sectionSwiper .swiper-slide{} 
+.section .swiper.sectionSwiper .swiper-slide img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.section .swiper-horizontal>.swiper-pagination-bullets,
+.section .swiper-pagination-bullets.swiper-pagination-horizontal,
+.section .swiper-pagination-custom,
+.section .swiper-pagination-fraction{
+    bottom: -20px;
+}
+
+.section-02{
+    margin: 100px 0; /* 양 옆 여백 없애주기  */
+}
+
+.section-02 h2{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.section-02 .swiper.mySwiper .swiper-slide{
+    position: relative;
+
+}
+.section-02 .swiper.mySwiper .swiper-slide img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block; /* 텍스트 배경영역 아래로 튀어나오는 부분 없애주기 */
+}
+.section-02 .swiper.mySwiper .swiper-slide .text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* 수직, 수평 방향 바꿔주기 */
+    justify-content: flex-end; /* 아래로 배치 */
+    background-color: rgba(0, 0, 0, 0.295);
+    display: none;
+}
+.section-02 .swiper.mySwiper .swiper-slide .text strong{
+    font-size: 32px;
+}
+.section-02 .swiper.mySwiper .swiper-slide .text p{
+    font-size: 20px;
+}
+.section-02 .swiper.mySwiper .swiper-slide.swiper-slide-next + .swiper-slide .text{
+    display: flex;
+}
+
+
+.section-03{
+    margin: 120px 0;
+}
+.section-03 h2{
+    width: 1280px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.section-03 .swiper.mySwiper-02 .swiper-wrapper{
+}
+.section-03 .swiper.mySwiper-02 .swiper-wrapper .swiper-slide{
+    position: relative;
+}
+.section-03 .swiper.mySwiper-02 .swiper-wrapper .swiper-slide img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+.section-03 .swiper.mySwiper-02 .swiper-wrapper .swiper-slide .text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.555);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    display: none;
+}
+.section-03 .swiper.mySwiper-02 .swiper-wrapper .swiper-slide .text strong{
+    font-size: 32px;
+}
+.section-03 .swiper.mySwiper-02 .swiper-wrapper .swiper-slide .text p{
+    font-size: 20px;
+}
+.section-03 .swiper.mySwiper-02 .swiper-wrapper .swiper-slide.swiper-slide-next + .swiper-slide .text{
+    display: flex;
+}

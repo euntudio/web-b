@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.mobile{
+    display: none; /* 데스크탑에서는 모바일 버전이 보이지 않도록 설정 */
+}
+.header{
+    height: 100px;
+    border-bottom: 1px solid #333;
+}
+.header .inner{
+    max-width: 1280px;
+    width: calc(100% - 40px); /* 좌우 20픽셀 여백 */
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .inner .logo{
+    height: 60px;
+}
+.header .inner .logo a{
+    display: block;
+    height: 100%;
+}
+.header .inner .logo a img{
+    height: 100%;
+}
+.header .inner .nav_pc .gnb{
+    display: flex;
+}
+.header .inner .nav_pc .gnb > li{
+    position: relative;
+}
+.header .inner .nav_pc .gnb > li .depth-01{
+    display: block;
+    line-height: 100px;
+    padding: 0 40px;
+}
+.header .inner .nav_pc .gnb > li .depth-02{
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    text-align: center;
+    border: 1px solid #333;
+    display: none;
+}
+.header .inner .nav_pc .gnb > li:hover .depth-02{
+    display: block;
+}
+
+
+@media screen and (max-width: 1024px) {  /* 모바일 기준 */
+    .pc{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .header .inner .nav_btn{ /* 버튼 영역 */
+                  height: 40px;
+        border: 0;
+        background-color: transparent;
+    }
+    .header .inner .nav_btn img{ /* 버튼 이미지 */
+        height: 100%;
+    }
+    .header .inner .nav_mobile{
+        width: 80%; /* 넓이 */
+        height: 100%; /* 높이 */
+        position: fixed; /* 스크롤시 고정 */
+        right: -100%; /* 오른쪽 화면 밖에 숨겨주기 */
+        top: 0; /* 100%로 아래로 내려주기 또는 0으로 상단배치 */
+        background-color: rgb(168, 220, 255);
+        transition: right 0.3s linear;
+    }
+    .header .inner .nav_mobile.active{
+        right: 0;
+    }
+    
+}
