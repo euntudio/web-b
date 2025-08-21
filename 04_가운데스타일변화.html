@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/04.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            var swiper = new Swiper(".scale-swiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        }
+    </script>
+    <title>가운데스타일변화</title>
+</head>
+
+<body>
+    <section class="section-01">
+        <!-- Slide per view -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/슬라이드-1.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</h2>
+                        <p>slide 1</p>
+                    </div><!-- .text end -->
+                </div><!-- .swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/슬라이드-2.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</h2>
+                        <p>slide 2</p>
+                    </div><!-- .text end -->
+                </div><!-- .swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/슬라이드-3.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</h2>
+                        <p>slide 3</p>
+                    </div><!-- .text end -->
+                </div><!-- .swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/슬라이드-4.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</h2>
+                        <p>slide 4</p>
+                    </div><!-- .text end -->
+                </div><!-- .swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/슬라이드-5.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</h2>
+                        <p>slide 5</p>
+                    </div><!-- .text end -->
+                </div><!-- .swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/슬라이드-6.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</h2>
+                        <p>slide 6</p>
+                    </div><!-- .text end -->
+                </div><!-- .swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/슬라이드-7.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</h2>
+                        <p>slide 7</p>
+                    </div><!-- .text end -->
+                </div><!-- .swiper-slide end -->
+
+            </div><!-- .swiper-wrapper end -->
+            <div class="swiper-pagination"></div>
+        </div><!-- .myswiper end -->
+    </section><!-- .section-01 end -->
+
+    <section class="section-02">
+        <!-- Slide per view -->
+        <div class="swiper scale-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/슬라이드-1.jpg" alt="">
+                    <p>swiper 1</p>
+                </div><!-- .swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/슬라이드-2.jpg" alt="">
+                    <p>swiper 2</p>
+                </div><!-- .swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/슬라이드-3.jpg" alt="">
+                    <p>swiper 3</p>
+                </div><!-- .swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/슬라이드-4.jpg" alt="">
+                    <p>swiper 4</p>
+                </div><!-- .swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/슬라이드-5.jpg" alt="">
+                    <p>swiper 5</p>
+                </div><!-- .swiper-slide end -->
+
+            </div><!-- .swiper-wrapper end -->
+            <div class="swiper-pagination"></div>
+        </div><!-- .scale-swiper end -->
+    </section><!-- .section-02 end -->
+</body>
+
+</html>
