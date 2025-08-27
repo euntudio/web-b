@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>스크립트 선택자지정</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .popup{
+            width: 400px;
+            position: fixed; /* 다른 요소들 위에 배치 */
+        }
+        .popup img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block; /* 이미지 아래쪽 여백 없애기 */
+        }
+        .popup button{
+            width: 100%; 
+            height: 50px;
+            background-color: darkturquoise;
+            border: 1px solid #333;
+        }
+        .box{
+            width: 300px;
+        }
+        .box img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        .box button{
+            width: 100%;
+            height: 50px;
+            border: 0;
+            background-color: #b700ff;
+            color: #fff;
+        }
+    </style>
+
+    <script>
+        window.onload = () => {
+            //요소찾기(선택자찾기)
+            //button
+            //document.getElementsByTagName('button')[0];
+            
+            //버튼을 클릭했을 때 실행
+            //클래스명 text-02에게 스타일 컬러값 red 적용
+
+            //변수 : 데이터를 담는 그릇
+            //변수선언 변수명 = 데이터;
+            //let letName = 데이터;
+
+            let btn = document.getElementsByTagName('button')[0];
+            let text01 = document.getElementsByTagName('div')[0];
+            let text02 = document.getElementsByClassName('text-02')[0];
+            let text03 = document.getElementById('text-03');
+
+            /* document.getElementsByTagName('button')[0].addEventListener('click', () => {
+                document.getElementsByClassName('text-02')[0].style.color = 'red';
+                //첫번째 div에게 스타일 배경색(backgroundColor) = '컬러값';
+                document.getElementsByTagName('div')[0].style.backgroundColor = 'skyblue'; */
+
+            btn.addEventListener('click', () => {
+                text02.style.color = 'red';
+                //첫번째 div에게 스타일 배경색(backgroundColor) = '컬러값';
+                text01.style.backgroundColor = 'skyblue';
+                //변수명 text03에게 스타일적용 글자크기 = '30px';
+                text03.style.fontSize = '30px';
+                //변수명 text03에게 스타일적용 글자두께 = 'bold';
+                text03.style.fontWeight = 'bold';
+            });
+
+            //팝업닫기
+            //버튼을 클릭했을 때 실행
+            //클래스명 popup이 없어짐 (스타일 적용 display 사용)
+
+            let popup = document.getElementsByClassName('popup')[0]; //클래스명 popup
+            let popupBtn = document.getElementsByTagName('button')[1]; //버튼태그
+
+            popupBtn.addEventListener('click', () => {
+                popup.style.display = 'none';
+
+            });
+
+            //이미지변경
+            //img, button
+            let boxImage = document.getElementsByTagName('img')[1]; 
+            let boxBtn = document.getElementsByTagName('button')[2];
+
+            //버튼을 클릭했을 때 실행
+            //이미지의 src값 변경(변수명.src = 'img/파일명.확장자명')
+
+            boxBtn.addEventListener('click', () => {
+                boxImage.src = 'img/이미지-1.jpg';
+                boxBtn.innerText = '🩰' //텍스트 변경
+            });
+
+
+
+        }; //script end
+    </script>
+    
+</head>
+<body>
+    <button>버튼</button>
+
+    <div>내용 1</div>
+    <div class="text-02">내용 2</div>
+    <div id="text-03">내용 3</div>
+
+    <div class="popup">
+        <img src="img/이미지-1.jpg" alt="">
+        <button>팝업닫기</button>
+    </div><!-- .popup end -->
+
+    <div class="box">
+        <img src="img/이미지-2.jpg" alt="">
+        <button>이미지변경</button>
+    </div><!-- .box end -->
+</body>
+</html>

@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    line-height: 1;
+    /* 최소한의 상단여백 */
+}
+
+.section .inner {
+    max-width: 1440px;
+    /* 태블릿 기준 넒이 */
+    width: calc(100% - 30px);
+    /* 태블릿 기준 여백 */
+    margin: 150px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 38px;
+}
+
+.section .inner>div {
+    /* .inner속 모든 div에게 (자식의 자식인 image, text제외하고 바로 밑 자식 title, item에게만) */
+    width: 31.59%;
+    border-radius: 10px;
+    overflow: hidden; /* 텍스트 배경 안보이도록 적용 */
+}
+
+.section .inner>div .image {
+    /* 높이 값 지정 */
+    /* height: 455px; *//* 패딩으로 늘려줬기 때문에 지우기 */
+    padding-bottom: 100%;
+    /* 부모가 가진 영역을 아래쪽으로 늘려줄 수 있음. */
+    position: relative;
+    /* 기준 */
+}
+
+.section .inner>div .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    /* 위치 잡아주기 */
+    top: 0;
+    left: 0;
+}
+
+.section .inner .title {
+    border: 1px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section .inner .item {
+    position: relative;
+    /* 아이템 텍스트 기준 잡아주기 */
+}
+
+.section .inner .item:hover .text {
+    display: flex;
+    /* 텍스트 호버 아이템에 지정한 display 확인해주기 */
+}
+
+.section .inner>div:nth-child(2) {
+    /* 아이템 위치 바꿔주기 */
+    order: -1;
+}
+
+.section .inner .item.item-big {
+    /* 아래 큰 이미지 클래스명 추가해서 작성 (비율 계산하기 702 / 1440 * 100) */
+    width: 48.75%;
+}
+
+.section .inner .item.item-big .image {
+    /* 이미지 세로 사이즈 455 / 이미지 가로 사이즈 702 * 100 */
+    padding-bottom: 64.81%;
+    /* 아래 이미지 세로 사이즈 늘어난 부분 맞춰주기 */
+}
+
+.section .inner .item .text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    /* 가로 100%, 세로 100% 지정해주었기 때문에 transfrom 사용하지 않아도 된다. */
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: aliceblue;
+    display: none;
+    /* 호버 적용하기 위해 숨겨주기 */
+}
+
+@media screen and (max-width: 1024px) {
+    .section .inner .item .text {
+        display: flex;
+        height: auto;
+        /* 높이값 초기화 원래는 100% */
+        top: auto;
+        /* top값 초기화 */
+        /* display: flex-end 사용이 불가능함. 이미 적용했기 때문에 그래서 포지션 위치값으로 조절해줘야함.*/
+        bottom: 0;
+        /* 바텀만 썼을 때, 탑 값도 같이 적용되기 때문에 top 값 초기화해주기  */
+        background: #ffffff;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        /* 그라디언트 io 참고 */
+        padding: 50px 0 20px;
+        /* 위 50, 오른쪽 0, 아래 20 */
+        /* 그라디언트 위치 값 조절 */
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .section .inner>div:nth-child(2){
+        order: 0;
+    }
+    .section .inner .title{
+        width: 100%;
+        border: 0;
+    }
+    .section .inner>div{
+        width: 47.78%; /* 172 / 360 * 100 */
+    }
+    .section .inner .item.item-big {
+        width: 47.78%; /* 172 / 360 * 100 */
+    }
+    .section .inner .item.item-big .image{
+        padding-bottom: 100%;
+    }
+    .section .inner .item .text{
+        position: static;
+        background: #fff;
+        color: #333;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+}

@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.ball{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(203, 221, 255);
+    animation-name: animationBall; /* 애니메이션 이름 자유롭게 지정 */
+    animation-iteration-count: infinite; /* 애니메이션 횟수 또는 infinite (반복) */
+    animation-timing-function: linear; /* 일정속도 ease, linear, ease-in, ease-out, ease-in-out */
+    animation-duration: 3s; /* 애니메이션 시간 */
+    animation-direction: alternate;
+    /* alternate : 애니메이션 정방향에서 번갈아가며 움직임
+    reverse : 반대 방향에서 시작해서 움직임 ,
+    alternate-reverse : 반대방향에서 번갈아가며 움직임 */
+    position: absolute;
+    top: 0;
+    left: 0;
+}   
+
+/* @keyframes animationBall {실행문} */
+@keyframes animationBall {
+    0%{ /* 처음 */ /* 중간지점 설정 가능 */
+        width: 150px;
+    }  
+    50%{
+        transform: translate(50px, 100px); /* 움직이는 위치 이동 */
+        height: 200px; 
+        border-radius: 50%;
+    }
+    100%{ /* 끝 */
+        width: 200px;
+        background-color: aqua;
+        transform: translateX(150px);
+    }
+}
+
+.text{
+    background-color: rgb(248, 194, 205);
+    color: aliceblue;
+    font-size: 40px;
+    margin-top: 300px;
+    overflow: hidden; /* 자식 영역 벗어나면 숨겨줌 (스크롤바 없애주기) */
+}
+.text ul{
+    display: flex;
+    gap: 40px;
+    animation: textSlide 10s infinite alternate linear;
+}
+.text ul li{
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+@keyframes textSlide{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-80%);
+    }
+}
