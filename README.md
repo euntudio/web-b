@@ -174,6 +174,17 @@ https://euntudio.github.io/web-b/스크립트01-자바스크립트작성.html
 
 https://euntudio.github.io/web-b/스크립트02_선택자지정.html
 
+https://euntudio.github.io/web-b/스크립트03-검색박스나타나기.html
+
+
+https://euntudio.github.io/web-b/스크립트03-검색박스나타나기_연습.html
+
+
+https://euntudio.github.io/web-b/스크립트04_조건식-스타일.html
+
+
+https://euntudio.github.io/web-b/스크립트04_조건식-스타일연습.html
+
 
 -----------------------슬라이드--------------------------
 
