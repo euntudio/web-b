@@ -113,5 +113,20 @@ body {
         width: 100%;
         border: 0;
     }
-
+    .section .inner>div{
+        width: 47.77%;
+    }
+    .section .inner .item.item-big {
+        width: 47.77%;
+    }
+    .section .inner .item.item-big .image{
+        padding-bottom: 100%;
+    }
+    .section .inner .item .text{
+        position: static;
+        background: transparent;
+        color: #333;
+        padding: 0;
+        margin-top: 10px;
+    }
 }

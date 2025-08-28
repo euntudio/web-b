@@ -149,7 +149,7 @@ body {
         padding-bottom: 100%;
     }
     .section .inner .item .text{
-        position: static;
+        position: static; /* 포지션 기본값으로 초기화 */
         background: #fff;
         color: #333;
         padding: 0;

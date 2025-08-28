@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건식 스타일</title>
+    <link rel="stylesheet" href="css/스크립트04.css">
+
+    <script>
+        window.onload = () => {
+            let body = document.getElementsByTagName('body')[0];
+            let modeBtn = document.getElementsByClassName('mode_btn')[0];
+
+            modeBtn.addEventListener('click', () => {
+                //alert(); 잘 되는지 확인
+
+                //조건문
+                // if(조건식) {
+                //    조건식이 맞으면 실행될 스크립트 코드
+                //} else {
+                //    조건식이 맞지 않으면 실행될 스크립트 코드
+                //}
+
+                //body가 가지고 있는 스타일의 배경색이 흰색이면 실행
+                //body의 배경색을 검은색으로 설정
+                //배경색이 흰색이 아니라면
+                //배경색을 흰색을 설정
+
+                if(getComputedStyle(body).backgroundColor == 'rgb(255, 255, 255)') {
+                    //alert('조건맞음');
+                    body.style.backgroundColor = '#000';
+                    //modeBtn.innerText = '<span>🌛</span>'; 태그명도 텍스트로 인식 태그명 같이 나옴
+                    //modeBtn.innerHTML = '<span>🌛</span>'; 태그 인식됨. 아이콘만 나옴
+                    modeBtn.innerHTML = '<span>🌛</span>'; //html 위주로 사용하면 됨.
+                } else {
+                    //alert('조건맞지않음');
+                    body.style.backgroundColor = '#fff';
+                    modeBtn.innerHTML = '🌞';
+                }
+
+            });
+        }; //script end
+    </script>
+</head>
+<body>
+    <div class="mode_btn">배경색변경🌞</div>
+</body>
+</html>
