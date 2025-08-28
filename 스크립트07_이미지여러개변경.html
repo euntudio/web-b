@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지여러개변경</title>
+    <link rel="stylesheet" href="css/스크립트07.css">
+    <script>
+        window.onload = () => {
+            let boxBtn = document.getElementsByClassName('btn')[0]
+            let boxImage = document.getElementsByTagName('img')[0]
+            let boxText = document.getElementsByClassName('text')[0]
+
+            let i = 0;
+
+            //배열 : 하나의 변수 안에 여러개의 데이터 값을 순서대로 저장
+            let imageList = ['img/이미지-1.jpg','img/이미지-2.jpg', 'img/이미지-3.jpg', 'img/이미지-4.jpg'];
+            let TextList = ['이미지 1', '이미지 2', '이미지 3', '이미지 4'];
+
+            boxBtn.addEventListener('click', () => {
+                i++;
+                console.log(i); //검사창 > 콘솔 > 버튼클릭했을 때 증가하는지 확인 i값이 1, 2, 3
+
+                //imageList[이미지 인덱스 값 숫자를 입력하거나 i를 작성해서 순차적으로 가지고 올 수 있도록 선택]
+                //imageList[1] //imageList에 있는 두번째 이미지 파일을 데려올 수 있음 0부터 시작
+                //imageList[2]
+                //imageList[i]
+                
+
+                //i값이 4보다 크거나 같을 때 (>=)
+                //i값은 0
+                if(i >= 4){
+                    i = 0;
+                }
+
+                //img의 src값을 변수명imageList가 가지는 값 순서대로 불러오도록 구현
+                boxImage.src = imageList[i];
+                boxText.innerHTML = TextList[i];
+
+            });
+
+        };
+    </script>
+</head>
+<body>
+    <div class="box">
+        <button class="btn">🌊</button>
+        <img src="img/이미지-1.jpg" alt="">
+        <p class="text">이미지 1</p>
+    </div><!-- .box end -->
+</body>
+</html>
