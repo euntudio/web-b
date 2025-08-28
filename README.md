@@ -185,6 +185,10 @@ https://euntudio.github.io/web-b/스크립트04_조건식-스타일.html
 
 https://euntudio.github.io/web-b/스크립트04_조건식-스타일연습.html
 
+https://euntudio.github.io/web-b/스크립트05_조건식-속성.html
+https://euntudio.github.io/web-b/스크립트06_증감연산자.html
+https://euntudio.github.io/web-b/스크립트07_이미지여러개변경.html
+
 
 -----------------------슬라이드--------------------------
 
