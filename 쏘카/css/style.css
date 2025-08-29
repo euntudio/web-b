@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    background-color: #141A24;
+    position: relative;
+}
+.header{
+    width: 100%;
+    height: 72px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.header .inner{
+    max-width: 1536px;
+    width: calc(100% - 96px);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .inner .logo{
+    width: 128px;
+}
+.header .inner .logo a{
+    width: 100%;
+    display: block;
+}
+.header .inner .logo a img{
+    width: 100%;
+}
+
+.header .inner .menu_btn{
+    width: 32px;
+    border: 0;
+    background-color: transparent;
+}
+.header .inner .menu_btn img{
+    width: 100%;
+}
+
+.header .inner .nav{
+    width: 556px;
+    height: 100%;
+    right: -100%;
+    background-color: #262f3c;
+    position: fixed;
+    top: 0;
+    padding: 40px;
+    transition: right 0.3s linear;
+
+}
+.header .inner .nav.active{
+    right: 0;
+}
+.header .inner .nav .close_btn{
+    width: 26px;
+    height: 26px;
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    right: 40px;
+    padding-bottom: 40px;
+    display: block;
+}
+.header .inner .nav .gnb{
+    position: absolute;
+    padding-top: 40px;
+}
+.header .inner .nav .gnb li{
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #99a1b1;
+    position: relative;
+
+}
+.header .inner .nav .gnb li:hover{
+    font-weight: bold;
+}
+.header .inner .nav .gnb li:nth-child(7)::after{
+    content: '';
+    width: 476px;
+    height: 1px;
+    background-color: #99a1b1;
+    display: block;
+    position: absolute;
+    margin-top: 28px;
+}
+.header .inner .nav .gnb li:nth-child(8){
+    padding-top: 28px;
+}
+
+.main .main_visual{
+    height: 100vh;
+    position: relative;
+}
+.main .main_visual video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main .main_visual .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.main .main_visual .text h2{
+    font-size: 95px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 2px;
+}
+.main .main_visual .text p{
+    font-size: 40px;
+    color: #fff;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+/* 872 484 */
+
+.car_share{
+    padding: 160px 48px 96px;
+}
+.car_share .inner{
+    max-width: 834px;
+    width: calc(100% - 96px);
+    margin: 0 auto;
+    position: relative;
+}
+.car_share .inner .btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 400px;
+    padding: 24px;
+}
+.car_share .inner button{
+    background-color: transparent;
+    border: 0;
+}
+.car_share .inner img{
+    width: 49px;
+    height: 48px;
+    color: #fff;
+}
+.car_share .inner .title_text{
+    color: #fff;
+    font-size: 37px;
+}
+.car_share .inner .title_text h2{
+    font-weight: 500;
+}
+.car_share .inner .list{
+}
+.car_share .inner .list .item{
+    width: 100%;
+    display: none;
+    margin-top: 50px;
+    padding-bottom: 100%;
+    position: relative;
+}
+.car_share .inner .list .item img{
+    width: 100%;
+    height: 484px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.car_share .inner .list .item.active{
+    display: block;
+}
+.car_share .inner .list .item .text{
+    width: 100%;
+    height: 100%;
+    padding: 48px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.car_share .inner .list .item .text .item_title{
+    font-size: 37px;
+    line-height: 150%;
+}
+.car_share .inner .list .item .text .item_text{
+    font-size: 18px;
+    line-height: 170%;
+}
+
+.service .inner{
+    max-width: 872px;
+    width: calc(100% - 96px);
+    margin: 160px auto;
+}
+.service .inner .title_text{
+    color: #fff;
+    font-size: 37px;
+}
+.service .inner .title_text h2{
+    font-weight: 500;
+}
+.service .inner .list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+.service .inner .list .item{
+    width: 47.17%;
+    position: relative;
+}
+.service .inner .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.service .inner .list .item .text{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 32px;
+}
