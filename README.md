@@ -194,6 +194,8 @@ https://euntudio.github.io/web-b/스크립트06_증감연산자.html
 https://euntudio.github.io/web-b/스크립트07_이미지여러개변경.html
 
 
+https://euntudio.github.io/web-b/index-2.html
+
 -----------------------슬라이드--------------------------
 
 
