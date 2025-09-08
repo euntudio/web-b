@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.section{
+    max-width: 1280px;
+    width: calc(100% - 30px);
+    margin: 50px auto;
+}
+.section .list{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.section .list .item{
+    width: 500px;
+    display: none;
+}
+.section .list .item img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+.section .list .item.active{ /* 활성화되면 보이도록 설정 */
+    display: block;
+}
+.section .list .item .text{
+    margin-top: 20px;
+}
+.section .list .item .text h2{
+    margin-bottom: 5px;
+}
+.section .btn{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 300px;
+
+}
+.section .btn button{
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff9a;
+    border: 0;
+}

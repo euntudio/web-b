@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.list .item{
+    font-size: 20px;
+    margin: 20px;
+}
+.list .item.active{
+    color: cornflowerblue;
+}
+.btn{
+    padding: 8px 10px;
+    margin: 20px;
+    font-size: 20px;
+    background-color: rgb(178, 205, 255);
+    border: 1px solid rgb(81, 142, 255);
+    border-radius: 50%;
+
+}
+

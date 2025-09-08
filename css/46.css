@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.box p{
+    width: 300px;
+    border: 1px solid #7cdb00;
+}
+
+/* 이텔릭체 (html에서는 <em>태그를 사용한다.) */
+.box p:nth-child(1){
+    font-style: italic; /* 이텔릭체 */
+    /* font-style: nomal (기본값) */
+}
+
+/* 글자 선 만들기 */
+.box p:nth-child(2){
+    text-decoration: underline; /* 밑줄 */
+    /* none : 기본값
+    underline : 밑줄
+    overline : 윗줄
+    line-through : 취소선 */
+}
+
+/* 글자 정렬 */
+.box p:nth-child(3){
+    text-align: center; /* 글자 가운데 정렬 */
+    /* left : 기본값
+    center : 가운데
+    right : 오른쪽
+    justify : 양끝정렬 */
+}
+
+/* 글자 줄 간격(행간) */
+.box p:nth-child(4){
+    line-height: 1; /* 제일 좁은 간격 */
+    /* 가독성이 좋은 범위는 1.3 - 1.8  */
+}
+
+/* 글자 좌우 간격 (자간) */
+.box p:nth-child(5){
+    /* 글자 사이 */
+    letter-spacing: 10px; /* 음수 양수 모두 사용가능 */
+
+    /* 단어 사이 */
+    word-spacing: 10px; /* 음수 양수 모두 사용가능 */
+}
+
+/* 글자 줄 바꿈 */
+.box p:nth-child(6){
+    word-break: keep-all; 
+    /* 
+    break-all : 국문 기본값(글자줄바꿈)
+    keep-all : 영문 기본값(단어줄바꿈)
+     */
+}
+
+/* 글자 세로로 작성 */
+.box p:nth-child(7){
+    writing-mode: vertical-lr; /* 왼쪽에서 오른쪽 */
+    /* vertical-rl : 오른쪽에서 왼쪽 */
+}
+
+/* 글자줄바꿈 방지 */
+.box p:nth-child(8){
+    white-space: nowrap;
+}
+
+/* 말 줄임표 */
+.box p:nth-child(9){
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 보여질 줄 수 */
+    overflow: hidden; /* 남는 텍스트 가려주기  */
+}
