@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>검색박스 연습 (+다크모드)</title>
+    <title>검색박스 연습 (+다크모드, 스크롤시 헤더스타일 변환)</title>
     <style>
         * {
             margin: 0;
@@ -23,11 +23,21 @@
 
         body {
             background-color: #fff;
+            height: 3000px;
+            position: relative;
         }
 
         .header {
+            width: 100%;
             height: 100px;
             border-bottom: 1px solid #ff79e2;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .header.active{
+            background-color: rgb(255, 121, 226, 0.5);
         }
 
         .header .inner {
@@ -92,7 +102,9 @@
             color: #fff;
 
         }
-
+        .section-01{
+            margin: 160px auto;
+        }
         .section-01 .box {
             max-width: 1440px;
             width: calc(100% - 30px);
@@ -110,7 +122,8 @@
             height: 300px;
             object-fit: cover;
         }
-        .section-01 .box .item .item_btn{
+
+        .section-01 .box .item .item_btn {
             width: 100%;
             height: 50px;
             display: block;
@@ -165,12 +178,26 @@
             let itemBtn = item.getElementsByClassName('item_btn')[0];
 
             itemBtn.addEventListener('click', () => {
-                if(itemImage.getAttribute('src') == 'img/이미지-1.jpg'){
+                if (itemImage.getAttribute('src') == 'img/이미지-1.jpg') {
                     itemImage.src = 'img/이미지-3.jpg';
                 } else {
                     itemImage.src = 'img/이미지-1.jpg';
                 }
-            });
+            });//이미지 변경 끝
+
+            //스크롤 헤더스타일 변화
+            let header = document.getElementsByClassName('header')[0];
+
+            window.addEventListener('scroll', () => {
+                let scrollBar = window.scrollY;
+                console.log(scrollBar)
+
+                if(scrollBar > 100){
+                    header.classList.add('active');
+                } else{
+                    header.classList.remove('active');
+                }
+            });//스크롤 헤더스타일 변화
 
         };//script end
     </script>

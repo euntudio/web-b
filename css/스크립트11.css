@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+@import url('reset.css');
+
+body{
+    height: 3000px;
+}
+.header {
+    width: 100%;
+    height: 100px;
+    /* position: relative; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+.header.active{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+}
+.header .inner{
+    max-width: 1280px;
+    width: calc(100% - 32px);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .inner .logo{
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .inner .logo a{
+    height: 100%;
+    display: block;
+}
+.header .inner .logo a img{
+    height: 100%;
+}
+.header .inner .nav .gnb{
+    display: flex;
+    gap: 80px;
+}
+.header .inner .util{
+    display: flex;
+    gap: 20px;
+}
