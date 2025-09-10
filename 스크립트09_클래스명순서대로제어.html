@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스명 순서대로 제어</title>
+    <link rel="stylesheet" href="css/스크립트09.css">
+    <script>
+        window.onload = () => {
+            let item = document.getElementsByClassName('item');
+            let btn = document.getElementsByClassName('btn')[0];
+
+            let i = 0; //아이템 순서대로 변경
+
+            //item[1] 대괄호 안에 해당하는 인덱스 작성가능
+            //classList.add('클래스명') 클래스명 추가
+            //classList.remove('클래스명') 클래스명 삭제
+
+            //item[2].classList.add('active') //세번째 아이템에게 활성화
+            //item[0].classList.remove('active') //첫번째 아이템에게 비활성화
+
+            //버튼을 클릭했을 때 실행 
+            //item 에게 순서대로 클래스명 active 추가
+            btn.addEventListener('click', () => {
+                i++;
+                
+                item[i-1].classList.remove('active');
+
+                if(i >= item.length){
+                    i = 0
+                };
+
+                item[i].classList.add('active');
+                
+            });
+
+        };
+    </script>
+</head>
+<body>
+    <div class="list">
+        <div class="item active">아이템 1</div>
+        <div class="item">아이템 2</div>
+        <div class="item">아이템 3</div>
+        <div class="item">아이템 4</div>
+        <div class="item">아이템 5</div>
+    </div><!-- .list end -->
+
+    <button class="btn">버튼</button>
+</body>
+</html>

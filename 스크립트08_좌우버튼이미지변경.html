@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌우버튼 이미지변경</title>
+    <link rel="stylesheet" href="css/스크립트08.css">
+    <script>
+        window.onload = () => {
+            let box = document.getElementsByClassName('box')[0];
+            let boxImage = box.getElementsByTagName('img')[0];
+            let boxPrev = box.getElementsByClassName('prev')[0];
+            let boxNext = box.getElementsByClassName('next')[0];
+            let boxNum = box.getElementsByClassName('num')[0];
+            let boxAllNum = box.getElementsByClassName('all_num')[0];
+
+            let i = 0;
+            let imageList = ['img/이미지-1.jpg', 'img/이미지-2.jpg', 'img/이미지-3.jpg', 'img/이미지-4.jpg']
+
+            //다음버튼을 클릭했을 때 실행
+            //1씩 증가
+            //img의 src값을 변수 imageList의 index(순서)값으로 나올 수 있도록 작성
+
+            //length => 개수, 길이 구하기
+            console.log(imageList.length);
+
+            //전체 이미지 수 => .all_num
+            //innerHTML 사용
+            boxAllNum.innerHTML = '<b>/ </b>' + imageList.length; //이미지가 늘어나도 자동으로 변경된다.
+
+            boxNext.addEventListener('click', () => {
+                i++;
+
+                if(i >= imageList.length){
+                    i = 0
+                };
+
+                boxImage.src = imageList[i];
+
+                //.num에게 클릭 시 숫자값 변경
+                //1, 2, 3, 4, 1, 2, 3, 4
+                boxNum.innerHTML = i + 1; // +1은 0제외하기 위해서 추가
+            });
+
+            boxPrev.addEventListener('click', () => {
+                i--;
+
+                if(i < 0){
+                    i = imageList.length - 1; //인덱스 값으로는 0, 1, 2, 3 의 4종류이기 때문에 3으로 입력해준다.
+                };
+
+                boxImage.src = imageList[i];
+                boxNum.innerHTML = i + 1; // +1은 0제외하기 위해서 추가
+                
+            });
+
+
+        }; //script end
+    </script>
+</head>
+<body>
+    <div class="box"> <!-- 이전버튼 다음버튼 -->
+        <img src="img/이미지-1.jpg" alt="">
+        <div class="btn">
+            <button class="prev">이전</button>
+            <button class="next">다음</button>
+        </div><!-- .btn end -->
+
+        <div class="page"> <!-- 페이지 변경 -->
+            <span class="num">1</span>
+            <span class="all_num"></span>
+        </div><!-- .page end -->
+
+    </div><!-- .box end -->
+</body>
+</html>
